@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+	list-style-type: none;
+}
+body {
+	height: 100vh;
+	position: relative;
+	background: #262525;
+}
+.form {
+	width: 700px;
+	margin: 0 auto;
+}
+.form__h1 {
+	height: 80px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: #c5e74c;
+	font-size: 26px;
+	text-align: center;
+	color: #343434;
+	line-height: 80px;
+}
+.form__input {
+	width: 100%;
+	box-sizing: border-box;
+	height: 70px;
+	text-indent: 60px;
+	font-size: 40px;
+	color: #ccc;
+	outline: none;
+}
+.form__input_empty {
+	border: 3px solid red;
+}
+.ul {
+	background: #fff;
+}
+.ul_all {
+	display: none;
+}
+.ul_done {
+	display: none;
+}
+.ul_active {
+	display: block;
+}
+.li {
+	display: flex;
+	height: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	color: #343434;
+	padding-left: 50px;
+	font-weight: bold;
+	position: relative;
+}
+.li_active:nth-child(2n) {
+	background-color: #f1f1f1;
+}
+.li_done {
+	text-decoration: line-through;
+	font-weight: normal;
+	font-style: italic;
+}
+.li-check {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-right: 20px;
+	border-radius:50%;
+	border: 1px solid #cecece;
+	line-height: 70px;
+	margin-top:20px;
+	position: relative;
+}
+.li-check:before, .li_done li-check:before {
+	content: '';
+	font-family: 'FontAwesome';
+	color: #fff;
+	position: absolute;
+	left: 7px;
+	top:-20px;
+}
+.li_active .li-check:hover,  .li_done .li-check{
+	background: #83b830;
+	border: 1px solid #83b830;
+}
+.li_active .li-check:hover:before, .li_done .li-check:before {
+	content:'\f00c';
+}
+.li_done .li-check:before {
+	left: 5px;
+}
+.li_done .li-check:hover {
+	background: red;
+	border-color: red;
+}
+.li_done .li-check:hover::before {
+	content: '\f00d';
+	left: 7px;
+}
+.li_done .li-check:hover::after {
+	content: 'вернуть задачу в "Открытые"';
+	display: block;
+	position: absolute;
+	min-width: 300px;
+	padding: 2px 5px;
+	border: 1px solid red;
+	left: 37px;
+	top: -23px;
+	line-height: 1.4;
+	color: red;
+	font-style: normal;
+	
+}
+
+.li-close {
+	position: absolute;
+	right: 20px;
+	text-decoration: none;
+	color: #ddd;
+}
+.li__input {
+	display: none;
+	width: 696px;
+	position: absolute;
+	left: 0;
+	height: 70px;
+	text-indent: 60px;
+	font-size: 40px;
+	color: #ccc;
+	outline: none;
+}
+.tabs {
+	border-radius: 6px;
+	background-color: #343434;
+	height:60px;
+	box-sizing: border-box;
+	padding-left: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.tabs__span {
+	font-size: 14px;
+	color: #ffffff;
+	opacity: 0.3;
+	margin-right: 30px;
+	line-height: 60px;
+}
+.tabs__tab {
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 60px;
+	margin-right: 20px;
+	text-decoration: none;
+}
+.tabs__tab_chosen {
+	font-style: italic;
+	opacity: 0.6;
+	font-weight: bold;
+}
+.tabs__tab_clear {
+}

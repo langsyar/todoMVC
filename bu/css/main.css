@@ -1,0 +1,149 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+	list-style-type: none;
+}
+body {
+	height: 100vh;
+	position: relative;
+	background: #262525;
+}
+.form {
+	width: 700px;
+	margin: 0 auto;
+	/* background: #fff; */
+}
+.form__h1 {
+	height: 80px;
+	border-radius: 6px;
+	background-color: #c5e74c;
+	font-size: 26px;
+	text-align: center;
+	color: #343434;
+	line-height: 80px;
+}
+.form__input {
+	width: 100%;
+	box-sizing: border-box;
+	height: 70px;
+	text-indent: 60px;
+	font-size: 40px;
+	color: #ccc;
+
+}
+.ul {
+	background: #fff;
+}
+.ul_all {
+	display: none;
+}
+.ul_done {
+	display: none;
+}
+.ul_active {
+	display: block;
+}
+.form__list {
+	display: flex;
+	height: 70px;
+	line-height: 70px;
+	font-size: 18px;
+	color: #343434;
+	padding-left: 50px;
+	font-weight: bold;
+}
+.form__list_active:nth-child(2n) {
+	background-color: #f1f1f1;
+}
+.form__list_done {
+	text-decoration: line-through;
+	font-weight: normal;
+	font-style: italic;
+}
+.form__list-check {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-right: 20px;
+	border-radius:50%;
+	border: 1px solid #cecece;
+	line-height: 70px;
+	margin-top:20px;
+	position: relative;
+}
+.form__list-check:before, .form__list_done form__list-check:before {
+	content: '';
+	font-family: 'FontAwesome';
+	color: #fff;
+	position: absolute;
+	left: 7px;
+	top:-20px;
+}
+.form__list_active .form__list-check:hover,  .form__list_done .form__list-check{
+	background: #83b830;
+	border: 1px solid #83b830;
+}
+.form__list_active .form__list-check:hover:before, .form__list_done .form__list-check:before {
+	content:'\f00c';
+}
+.form__list_done .form__list-check:before {
+	left: 5px;
+}
+.form__list_done .form__list-check:hover {
+	background: red;
+	border-color: red;
+}
+.form__list_done .form__list-check:hover::before {
+	content: '\f00d';
+	left: 7px;
+}
+.form__list_done .form__list-check:hover::after {
+	content: 'вернуть эту задачу в "Открытые?"';
+	display: block;
+	position: absolute;
+	min-width: 300px;
+	padding: 2px 5px;
+	border: 1px solid red;
+	left: 37px;
+	top: -23px;
+	line-height: 1.4;
+	color: red;
+	font-style: normal;
+	
+}
+.tabs {
+	border-radius: 6px;
+	background-color: #343434;
+	height:60px;
+	box-sizing: border-box;
+	padding-left: 50px;
+}
+.tabs__span {
+	font-size: 14px;
+	color: #ffffff;
+	opacity: 0.3;
+	margin-right: 30px;
+}
+.tabs__tab {
+	display: inline-block;
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 60px;
+	margin-right: 20px;
+	text-decoration: none;
+}
+.tabs__tab_chosen {
+	font-style: italic;
+	opacity: 0.6;
+	font-weight: bold;
+}
