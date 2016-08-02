@@ -63,9 +63,10 @@ $('.form__input').keyup(function(e){
 	function inputSubmit() {
 		var input = $('.form__input').val();
 		$('.form__input').val('');
-    var listItem = $('<li class="li li_active"><a class="li-check" href="#"></a><span>' + input +'</span><a href="#" class="li-close">x</a></li>');
+    var listItem = $('<li class="li li_active"><a class="li-check" href="#"></a><span>' + input +'</span><a href="#" class="li-close">x</a><input class="li__input" type="text"></li>');
     listItem.on('dblclick', function(){
 			console.log(2);
+			$(this).children('.li__input').css('display', 'block');
 		});
 		$('.ul_active').append(listItem);
 		
@@ -99,6 +100,12 @@ $('.form__input').keyup(function(e){
 		$(this).parent().remove();
 		$('.tabs__span').text("Осталось задач: " + $('.ul_active li').length);
 	}
+	
+	
+	
+	
+	
+	
 	
 	
 	
